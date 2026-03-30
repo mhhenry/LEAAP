@@ -4,6 +4,7 @@
 
 LEAAP allows users to upload a spreadsheet of transcriptions, define one or more referent speakers, select one or more distance algorithms, and generate downloadable workbooks, figures, and interactive tables. The program is especially useful for applications involving speech sound disorders (SSD), accented speech, and other contexts where researchers or clinicians want to quantify how productions differ from a relevant comparison group.
 
+Please cite the application in your work with the following: Henry, M., Henry, J., & Bent, T. (2026). Levenshtein Error Analysis and Alignments Program (LEAAP) (Version 1.0) [computer program]. Retrieved from https://mhhenry-leaap.share.connect.posit.cloud
 ---
 
 ## Features
@@ -205,5 +206,12 @@ If you are using a local virtual environment for Python, configure it through `r
 ## Help / Tutorial Screenshots
 
 The application help and tutorial pages use screenshots to illustrate the expected import format and workflow. Add the screenshots to your repository and update the paths below as needed.
+
+## Disclaimer
+
+LEAAP is provided for research, educational, and clinical support purposes only. It is intended to assist with transcription comparison, alignment, and error analysis, but it does not replace clinical judgment, diagnostic decision-making, or independent review of results. Uploaded files are processed only for the purpose of generating the requested analyses. Files may be temporarily stored on the server during the session and are not intended to be used for other purposes or shared with third parties except as necessary for secure hosting and app operation. Users are responsible for ensuring that uploaded materials comply with all applicable privacy and confidentiality requirements. 
+
+LEAAP is provided “as is” and without warranty of any kind, express or implied. The developers make no guarantee that the application will be uninterrupted, error-free, secure, or that all results will be accurate in every case. Use of LEAAP is at the user’s own risk, and the developers are not liable for any loss of data, damages, or other consequences arising from use of the app. This disclaimer may be updated from time to time.
+
 
 ```markdown
