@@ -1,6 +1,6 @@
 # LEAAP
 
-**LEAAP** (**L**evenshtein **E**rror **A**nalysis & **A**lignments **P**rogram) is a Shiny-based application with a Python backend for comparing phonetic transcriptions using edit-distance methods. It was designed to support speech research and clinical workflows by making transcription comparison more transparent, reproducible, and accessible to non-programmers.
+**L**evenshtein **E**rror **A**nalysis & **A**lignments **P**rogram (**LEAAP**) is a Shiny-based application with a Python backend for comparing phonetic transcriptions using edit-distance methods. It was designed to support speech research and clinical workflows by making transcription comparison more transparent, reproducible, and accessible to non-programmers.
 
 LEAAP allows users to upload a spreadsheet of transcriptions, define one or more referent speakers, select one or more distance algorithms, and generate downloadable workbooks, figures, and interactive tables. The program is especially useful for applications involving speech sound disorders (SSD), accented speech, and other contexts where researchers or clinicians want to quantify how productions differ from a relevant comparison group.
 
