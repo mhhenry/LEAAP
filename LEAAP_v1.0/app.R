@@ -928,11 +928,15 @@ ui <- tagList(
               div(class = "section-title", "About LEAAP"),
               p(
                 class = "section-text",
-                "This application is a user-friendly front end for edit distance based transcription analysis. It is intended to make alignment output and error summaries easier for researchers and clinicians to explore."
+                "Levenshtein Error Analysis & Alignments Program (LEAAP) is a Shiny-based application with a Python backend for comparing phonetic transcriptions using edit-distance methods. It was designed to support speech research and clinical workflows by making transcription comparison more transparent, reproducible, and accessible to non-programmers. LEAAP allows users to upload a spreadsheet of transcriptions, define one or more referent speakers, select one or more distance algorithms, and generate downloadable workbooks, figures, and interactive tables. The program is especially useful for applications involving speech sound disorders (SSD), accented speech, and other contexts where researchers or clinicians want to quantify how productions differ from a relevant comparison group."
               ),
               p(
                 class = "section-text",
-                "Please cite the application in your work with the following: Henry, M., Henry, J., & Bent, T. (XXXX). Levenshtein Error Analysis and Alignments Program (LEAAP). [computer program]. Retrieved XX Month XXXX from https://www.LEAAP.org/."
+                "LEAAP is provided for research, educational, and clinical support purposes only. It is intended to assist with transcription comparison, alignment, and error analysis, but it does not replace clinical judgment, diagnostic decision-making, or independent review of results. Uploaded files are processed only for the purpose of generating the requested analyses. Files may be temporarily stored on the server during the session and are not intended to be used for other purposes or shared with third parties except as necessary for secure hosting and app operation. Users are responsible for ensuring that uploaded materials comply with all applicable privacy and confidentiality requirements. LEAAP is provided “as is” and without warranty of any kind, express or implied. The developers make no guarantee that the application will be uninterrupted, error-free, secure, or that all results will be accurate in every case. Use of LEAAP is at the user’s own risk, and the developers are not liable for any loss of data, damages, or other consequences arising from use of the app. This disclaimer may be updated from time to time."
+              ),
+              p(
+                class = "section-text",
+                "Please cite the application in your work with the following: Henry, M., Henry, J., & Bent, T. (2026). Levenshtein Error Analysis and Alignments Program (LEAAP) (Version 1.0) [computer program]. Retrieved from https://mhhenry-leaap.share.connect.posit.cloud"
               )
             )
           )
