@@ -45,12 +45,6 @@ if (dir.exists("templates")) {
   )
 }
 
-if (dir.exists("screenshots")) {
-  addResourcePath(
-    prefix = "screenshots",
-    directoryPath = normalizePath("screenshots", winslash = "/", mustWork = TRUE)
-  )
-}
 
 # --------------------------------------------- #
 # 2) App-level constants and helper mappings    #
@@ -744,7 +738,7 @@ ui <- tagList(
               ),
               
               img(
-                src = "screenshots/Screenshot_1_Template.PNG",
+                src = "screenshots/Screenshot_1_Template.png",
                 class = "tutorial-img"
               ),
               p(
@@ -753,7 +747,7 @@ ui <- tagList(
               ),
               
               img(
-                src = "screenshots/Screenshot_2_Grouping.PNG",
+                src = "screenshots/Screenshot_2_Grouping.png",
                 class = "tutorial-img"
               ),
               p(
@@ -762,7 +756,7 @@ ui <- tagList(
               ),
               
               img(
-                src = "screenshots/Screenshot_3_Referents.PNG",
+                src = "screenshots/Screenshot_3_Referents.png",
                 class = "tutorial-img"
               ),
               p(
@@ -774,14 +768,14 @@ ui <- tagList(
                 column(
                   width = 6,
                   img(
-                    src = "screenshots/Screenshot_4_Speakers.PNG",
+                    src = "screenshots/Screenshot_4_Speakers.png",
                     class = "tutorial-img"
                   )
                 ),
                 column(
                   width = 6,
                   img(
-                    src = "screenshots/Screenshot_5_Items.PNG",
+                    src = "screenshots/Screenshot_5_Items.png",
                     class = "tutorial-img"
                   )
                 )
@@ -1872,7 +1866,7 @@ server <- function(input, output, session) {
 
   output$download_alignment_item_png <- downloadHandler(
     filename = function() {
-      paste0("LEAAP_alignment_rate_by_item_", format(Sys.Date(), "%Y%m%d"), ".png")
+      paste0("LEAAP_alignment_rate_by_item_", format(Sys.Date(), "%Y%m%d"), "")
     },
     content = function(file) {
       ggplot2::ggsave(file, plot = make_alignment_item_plot(), width = 7, height = 5, dpi = 300, units = "in")
@@ -1881,7 +1875,7 @@ server <- function(input, output, session) {
 
   output$download_alignment_phoneme_png <- downloadHandler(
     filename = function() {
-      paste0("LEAAP_alignment_rate_by_phoneme_", format(Sys.Date(), "%Y%m%d"), ".png")
+      paste0("LEAAP_alignment_rate_by_phoneme_", format(Sys.Date(), "%Y%m%d"), "")
     },
     content = function(file) {
       ggplot2::ggsave(file, plot = make_alignment_phoneme_plot(), width = 7, height = 5, dpi = 300, units = "in")
@@ -1890,7 +1884,7 @@ server <- function(input, output, session) {
 
   output$download_item_prop_png <- downloadHandler(
     filename = function() {
-      paste0("LEAAP_error_proportion_item_", format(Sys.Date(), "%Y%m%d"), ".png")
+      paste0("LEAAP_error_proportion_item_", format(Sys.Date(), "%Y%m%d"), "")
     },
     content = function(file) {
       ggplot2::ggsave(file, plot = make_item_prop_plot(), width = 8, height = 6, dpi = 300, units = "in")
@@ -1899,7 +1893,7 @@ server <- function(input, output, session) {
 
   output$download_referent_phoneme_png <- downloadHandler(
     filename = function() {
-      paste0("LEAAP_phonemic_analysis_", format(Sys.Date(), "%Y%m%d"), ".png")
+      paste0("LEAAP_phonemic_analysis_", format(Sys.Date(), "%Y%m%d"), "")
     },
     content = function(file) {
       ggplot2::ggsave(file, plot = make_referent_phoneme_plot(), width = 8, height = 7, dpi = 300, units = "in")
@@ -1908,7 +1902,7 @@ server <- function(input, output, session) {
 
   output$download_distance_png <- downloadHandler(
     filename = function() {
-      paste0("LEAAP_distance_summary_", format(Sys.Date(), "%Y%m%d"), ".png")
+      paste0("LEAAP_distance_summary_", format(Sys.Date(), "%Y%m%d"), "")
     },
     content = function(file) {
       ggplot2::ggsave(file, plot = make_distance_plot(), width = 8, height = 6, dpi = 300, units = "in")
