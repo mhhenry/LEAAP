@@ -1581,7 +1581,8 @@ server <- function(input, output, session) {
         y = "Error count"
       ) +
       theme_bw(base_size = 12) +
-      theme(panel.grid.minor = element_blank())
+      theme( panel.grid.minor = element_blank(),
+  axis.text.y = element_text(size = 16))
   }
 
   make_distance_plot <- function() {
