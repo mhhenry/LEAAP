@@ -93,7 +93,7 @@ error_palette <- c(
 
 status_palette <- c(
   "Aligned" = "#4E79A7",
-  "In Error" = "#E15759"
+  "Non-aligned" = "#E15759"
 )
 
 summary_card <- function(title, value, subtitle = NULL, color = "#4E79A7") {
@@ -545,7 +545,7 @@ ui <- tagList(
                       plotOutput("alignment_item_plot", height = "420px"),
                       div(
                         class = "plot-caption",
-                        "Items are classified as Aligned when total_errors = 0 and In Error when total_errors is at least 1."
+                        "Items are classified as Aligned when total_errors = 0 and Non-aligned when total_errors is at least 1."
                       ),
                       br(),
                       div(
@@ -559,7 +559,7 @@ ui <- tagList(
                       plotOutput("alignment_phoneme_plot", height = "420px"),
                       div(
                         class = "plot-caption",
-                        "Phoneme slots are classified as Aligned when error_type = alignment and In Error for any other error_type."
+                        "Phoneme slots are classified as Aligned when error_type = alignment and Non-aligned for any other error_type."
                       ),
                       br(),
                       div(
@@ -1403,7 +1403,7 @@ server <- function(input, output, session) {
     
     if (is.null(group_col)) {
       plot_df <- df %>%
-        mutate(status = if_else(total_errors == 0, "Aligned", "In Error")) %>%
+        mutate(status = if_else(total_errors == 0, "Aligned", "Non-aligned")) %>%
         count(status, name = "n") %>%
         mutate(
           prop = n / sum(n),
@@ -1413,7 +1413,7 @@ server <- function(input, output, session) {
     } else {
       plot_df <- df %>%
         mutate(
-          status = if_else(total_errors == 0, "Aligned", "In Error"),
+          status = if_else(total_errors == 0, "Aligned", "Non-aligned"),
           facet_group = as.character(.data[[group_col]])
         ) %>%
         count(facet_group, status, name = "n") %>%
@@ -1459,7 +1459,7 @@ server <- function(input, output, session) {
     
     if (is.null(group_col)) {
       plot_df <- df %>%
-        mutate(status = if_else(error_type == "alignment", "Aligned", "In Error")) %>%
+        mutate(status = if_else(error_type == "alignment", "Aligned", "Non-aligned")) %>%
         count(status, name = "n") %>%
         mutate(
           prop = n / sum(n),
@@ -1469,7 +1469,7 @@ server <- function(input, output, session) {
     } else {
       plot_df <- df %>%
         mutate(
-          status = if_else(error_type == "alignment", "Aligned", "In Error"),
+          status = if_else(error_type == "alignment", "Aligned", "Non-aligned"),
           facet_group = as.character(.data[[group_col]])
         ) %>%
         count(facet_group, status, name = "n") %>%
