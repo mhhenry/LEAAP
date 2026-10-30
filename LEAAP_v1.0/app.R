@@ -1441,6 +1441,22 @@ server <- function(input, output, session) {
         legend.position = "bottom",
         strip.text = element_text(face = "bold"),
         strip.background = element_rect(fill = "#edf3f9", color = "#d8e4f0"),
+        plot.background = element_rect(
+          fill = "white",
+          color = NA
+        ),
+        panel.background = element_rect(
+          fill = "white",
+          color = NA
+        ),
+        legend.background = element_rect(
+          fill = "white",
+          color = NA
+        ),
+        legend.box.background = element_rect(
+          fill = "white",
+          color = NA
+        ),
         aspect.ratio = 1
       )
     
@@ -1880,7 +1896,7 @@ server <- function(input, output, session) {
       paste0("LEAAP_alignment_rate_by_item_", format(Sys.Date(), "%Y%m%d"), ".png")
     },
     content = function(file) {
-      ggplot2::ggsave(file, plot = make_alignment_item_plot(), width = 7, height = 5, dpi = 300, units = "in")
+      ggplot2::ggsave(file, plot = make_alignment_item_plot(), width = 7, height = 5, dpi = 300, units = "in", bg="white")
     }
   )
 
@@ -1889,7 +1905,7 @@ server <- function(input, output, session) {
       paste0("LEAAP_alignment_rate_by_phoneme_", format(Sys.Date(), "%Y%m%d"), ".png")
     },
     content = function(file) {
-      ggplot2::ggsave(file, plot = make_alignment_phoneme_plot(), width = 7, height = 5, dpi = 300, units = "in")
+      ggplot2::ggsave(file, plot = make_alignment_phoneme_plot(), width = 7, height = 5, dpi = 300, units = "in", bg="white")
     }
   )
 
