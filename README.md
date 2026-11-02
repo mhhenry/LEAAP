@@ -4,7 +4,7 @@
 
 LEAAP allows users to upload a spreadsheet of transcriptions, define one or more referent speakers, select one or more distance algorithms, and generate downloadable workbooks, figures, and interactive tables. The program is especially useful for applications involving speech sound disorders (SSD), accented speech, and other contexts where researchers or clinicians want to quantify how productions differ from a relevant comparison group.
 
-Please cite the application in your work with the following: Henry, M., Henry, J., & Bent, T. (2026). Levenshtein Error Analysis and Alignments Program (LEAAP) (Version 1.0) [computer program]. Retrieved from https://mhhenry-leaap.share.connect.posit.cloud
+Please cite the application in your work with the following: Henry, M., Henry, J., & Bent, T. (2026). Levenshtein Error Analysis and Alignments Program (LEAAP) (Version 1.1) [computer program]. Retrieved from https://mhhenry-leaap.share.connect.posit.cloud
 
 ---
 
